@@ -1,10 +1,10 @@
 function handleSearch() {
   var div = document.getElementById("cardDiv");
   const query = $("#searchInput").val();
-  const url =
-    "https://www.food2fork.com/api/search?key=a9f512078036f765d8cb7b8a968864e6&q=" +
-    query;
-  fetch(url)
+//   const url =
+//     "https://www.food2fork.com/api/search?key=a9f512078036f765d8cb7b8a968864e6&q=" +
+//     query;
+  fetch("recipe.json")
     .then(resp => {
       resp.json().then(data => {
         console.log(data);
